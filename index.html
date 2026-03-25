@@ -1,154 +1,171 @@
 <!DOCTYPE html>
-
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Saya</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portofolio Saya</title>
 
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Arial, sans-serif;
-    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
-    body {
-        background: #0f172a;
-        color: #e2e8f0;
-    }
+body {
+    background: #0f172a;
+    color: #e2e8f0;
+}
 
+/* HEADER */
+header {
+    padding: 20px 40px;
+    background: #020617;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: #38bdf8;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #cbd5f5;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* HERO */
+.hero {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 36px;
+}
+
+.hero p {
+    color: #94a3b8;
+    margin-top: 10px;
+}
+
+/* PROJECT */
+.projects {
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.projects h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #020617;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #1e293b;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #38bdf8;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 12px;
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background: #020617;
+    color: #64748b;
+}
+
+/* RESPONSIVE */
+@media(max-width: 600px) {
     header {
-        padding: 20px 40px;
-        background: #020617;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        flex-direction: column;
     }
 
-    header h1 {
-        font-size: 24px;
-        color: #38bdf8;
-    }
-
-    nav a {
-        margin-left: 20px;
-        text-decoration: none;
-        color: #cbd5f5;
-        transition: 0.3s;
-    }
-
-    nav a:hover {
-        color: #38bdf8;
-    }
-
-    .hero {
-        padding: 80px 40px;
-        text-align: center;
-    }
-
-    .hero h2 {
-        font-size: 36px;
-        margin-bottom: 10px;
-    }
-
-    .hero p {
-        color: #94a3b8;
-    }
-
-    .projects {
-        padding: 40px;
-    }
-
-    .projects h2 {
-        margin-bottom: 20px;
-    }
-
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-    }
-
-    .card {
-        background: #020617;
-        padding: 20px;
-        border-radius: 12px;
-        transition: 0.3s;
-        border: 1px solid #1e293b;
-    }
-
-    .card:hover {
-        transform: translateY(-5px);
-        border-color: #38bdf8;
-    }
-
-    .card h3 {
-        margin-bottom: 10px;
-    }
-
-    .card p {
-        font-size: 14px;
-        color: #94a3b8;
-    }
-
-    .card a {
-        display: inline-block;
+    nav {
         margin-top: 10px;
-        color: #38bdf8;
-        text-decoration: none;
     }
-
-    footer {
-        text-align: center;
-        padding: 20px;
-        margin-top: 40px;
-        background: #020617;
-        color: #64748b;
-    }
+}
 </style>
-
 </head>
 
 <body>
-
-<header>
-    <h1>Portofolio Saya</h1>
-</header>
-
-<section class="hero">
-    <h2>Halo, saya seorang Developer 👋</h2>
-    <p>Saya membuat game, aplikasi, dan sistem backend.</p>
-</section>
-
+    
 <section class="projects" id="projects">
     <h2>Proyek Saya</h2>
 
-<div class="grid">
+    <div class="grid">
 
-    <div class="card">
-        <h3>Aplikasi Absensi Admin</h3>
-        <p>Dashboard admin sekaligus sistem backend untuk mengelola data absensi.</p>
-        <img src="https://github.com/nur-santo/absensi-admin/blob/master/img/dashboard.png">
-        <a href="#">Lihat Proyek</a>
+        <div class="card">
+            <img src="https://raw.githubusercontent.com/nur-santo/absensi-admin/master/img/dashboard.png" alt="Admin">
+            <div class="card-content">
+                <h3>Aplikasi Absensi Admin</h3>
+                <p>Dashboard admin sekaligus server backend untuk mengelola data absensi.</p>
+                <a href="https://github.com/nur-santo/absensi-admin">Lihat Proyek</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://raw.githubusercontent.com/nur-santo/absensi-user/master/img/home.jpg" alt="User">
+            <div class="card-content">
+                <h3>Aplikasi Absensi Pengguna</h3>
+                <p>Aplikasi mobile yang terhubung dengan backend untuk absensi.</p>
+                <a href="https://github.com/nur-santo/absensi-user">Lihat Proyek</a>
+            </div>
+        </div>
+
     </div>
-
-    <div class="card">
-        <h3>Aplikasi Absensi Pengguna</h3>
-        <p>Aplikasi mobile untuk pengguna yang terhubung dengan backend untuk proses absensi.</p>
-        <img src="https://github.com/nur-santo/absensi-user/blob/master/img/home.jpg">
-        <a href="#">Lihat Proyek</a>
-    </div>
-
-</div>
-
-
 </section>
 
-<footer>
-    <p>© 2026 Nama Anda. Semua hak dilindungi.</p>
-</footer>
+
 
 </body>
 </html>
