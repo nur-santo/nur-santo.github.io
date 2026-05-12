@@ -3,256 +3,387 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Iwan Nursanto Ramadhan - Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<title>Portfolio - Iwan NurSanto</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{
-  --bg:#0e0e0e;
-  --bg2:#161616;
-  --bg3:#1e1e1e;
-  --border:#2a2a2a;
-  --green:#22c55e;
-  --green-dim:#16a34a;
-  --green-faint:#0d2318;
-  --text:#e8e8e8;
-  --muted:#888;
-  --hint:#555;
-  --mono:'Space Mono',monospace;
-  --sans:'Space Grotesk',sans-serif;
-}
-body{font-family:var(--sans);background:var(--bg);color:var(--text);padding:2rem 1rem;min-height:100vh}
-.page{max-width:860px;margin:0 auto}
-.gap{margin-bottom:2px}
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-.hero{background:var(--bg2);border:1px solid var(--border);padding:2.5rem;margin-bottom:2px}
-.hero-label{font-family:var(--mono);font-size:.7rem;color:var(--green);letter-spacing:.12em;margin-bottom:.6rem}
-.hero-name{font-family:var(--mono);font-size:2.4rem;font-weight:700;color:var(--text);line-height:1.1;margin-bottom:.5rem}
-.hero-role{font-size:.95rem;color:var(--muted);margin-bottom:1.5rem;line-height:1.6}
-.contact-pills{display:flex;flex-wrap:wrap;gap:.5rem}
-.cpill{display:flex;align-items:center;gap:.4rem;font-family:var(--mono);font-size:.72rem;color:var(--muted);background:var(--bg3);border:1px solid var(--border);padding:.3rem .75rem;text-decoration:none;transition:border-color .2s,color .2s}
-.cpill:hover{border-color:var(--green-dim);color:var(--green)}
-.cpill svg{width:12px;height:12px;opacity:.6;flex-shrink:0}
+  body {
+    background: #e8eef6;
+    color: #2c2c2c;
+    font-family: sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+  }
 
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-bottom:2px}
-.panel{background:var(--bg2);border:1px solid var(--border);padding:1.75rem}
-.panel-full{background:var(--bg2);border:1px solid var(--border);padding:1.75rem;margin-bottom:2px}
-.panel-label{font-family:var(--mono);font-size:.65rem;color:var(--green);letter-spacing:.14em;margin-bottom:1.25rem;display:flex;align-items:center;gap:.5rem}
-.panel-label::before{content:'';display:inline-block;width:8px;height:1px;background:var(--green)}
+  a { color: inherit; text-decoration: none; }
 
-.about-text{font-size:.9rem;color:var(--muted);line-height:1.8}
+  .wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
 
-.skill-row{margin-bottom:.9rem}
-.skill-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.35rem}
-.skill-name{font-family:var(--mono);font-size:.78rem;color:var(--text)}
-.skill-pct{font-family:var(--mono);font-size:.7rem;color:var(--green)}
-.skill-track{height:2px;background:var(--bg3);border:1px solid var(--border)}
-.skill-fill{height:2px;background:var(--green)}
+  header {
+    padding: 72px 40px 56px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 
-.tag-wrap{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.75rem}
-.tag{font-family:var(--mono);font-size:.68rem;color:var(--green);background:var(--green-faint);border:1px solid var(--green-dim);padding:.25rem .6rem;letter-spacing:.04em}
+  header h1 {
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: -0.02em;
+    color: #1a1a1a;
+  }
 
-.entry{margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
-.entry:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
-.entry-header{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;margin-bottom:.3rem;flex-wrap:wrap}
-.entry-title{font-family:var(--mono);font-size:.9rem;font-weight:700;color:var(--text)}
-.entry-sub{font-size:.8rem;color:var(--green);margin-bottom:.5rem}
-.entry-date{font-family:var(--mono);font-size:.7rem;color:var(--hint);background:var(--bg3);border:1px solid var(--border);padding:.2rem .6rem;white-space:nowrap}
-.entry-body{font-size:.85rem;color:var(--muted);line-height:1.7}
+  header p {
+    color: #6b7280;
+    font-size: 15px;
+    max-width: 560px;
+  }
 
-.feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:.3rem;margin-top:.8rem}
-.feat{display:flex;align-items:flex-start;gap:.4rem;font-family:var(--mono);font-size:.72rem;color:var(--muted)}
-.feat svg{width:10px;height:10px;flex-shrink:0;margin-top:2px;color:var(--green)}
+  section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px 72px;
+  }
 
-.tech-note{margin-top:.75rem;padding:.75rem 1rem;background:var(--bg3);border-left:2px solid var(--green);font-family:var(--mono);font-size:.75rem;color:var(--muted);line-height:1.7}
-.tech-note b{color:var(--text)}
+  .section-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #9ca3af;
+    margin-bottom: 20px;
+  }
 
-.repo-btns{display:flex;gap:.5rem;margin-top:1rem;flex-wrap:wrap}
-.repo-btn{display:flex;align-items:center;gap:.45rem;font-family:var(--mono);font-size:.72rem;color:var(--green);background:var(--green-faint);border:1px solid var(--green-dim);padding:.35rem .85rem;text-decoration:none;transition:background .2s}
-.repo-btn:hover{background:#112b1a}
-.repo-btn svg{width:13px;height:13px}
+  .card {
+    background: #fff;
+    border: 1px solid #d1dae6;
+    border-radius: 12px;
+    overflow: hidden;
+  }
 
-.soft-grid{display:grid;grid-template-columns:1fr 1fr;gap:.4rem}
-.soft-item{display:flex;align-items:center;gap:.6rem;font-family:var(--mono);font-size:.78rem;color:var(--muted);padding:.4rem 0;border-bottom:1px solid var(--border)}
-.soft-item svg{color:var(--green);flex-shrink:0;width:11px;height:11px}
+  .card-header {
+    padding: 28px 36px;
+    border-bottom: 1px solid #e8eef6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
 
-.edu-gpa{display:inline-block;font-family:var(--mono);font-size:.78rem;color:var(--green);background:var(--green-faint);border:1px solid var(--green-dim);padding:.15rem .6rem;margin-top:.5rem}
+  .card-header h2 {
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: #1a1a1a;
+  }
 
-@media(max-width:620px){
-  .grid2{grid-template-columns:1fr}
-  .feat-grid{grid-template-columns:1fr}
-  .soft-grid{grid-template-columns:1fr}
-  .hero-name{font-size:1.8rem}
-}
+  .card-header .subtitle {
+    font-size: 13px;
+    color: #9ca3af;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 8px 20px;
+    background: #2563eb;
+    border: 1px solid #2563eb;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #fff;
+    white-space: nowrap;
+    font-weight: 500;
+    transition: background 0.2s;
+  }
+  .btn:hover {
+    background: #1d4ed8;
+    border-color: #1d4ed8;
+  }
+
+  .card-body {
+    padding: 36px;
+  }
+
+  .feature {
+    margin-bottom: 40px;
+  }
+  .feature:last-child { margin-bottom: 0; }
+
+  .feature h3 {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #6b7280;
+    margin-bottom: 6px;
+  }
+
+  .feature p {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 16px;
+  }
+
+  .gallery {
+    display: grid;
+    gap: 12px;
+  }
+  .gallery.cols-2 { grid-template-columns: repeat(2, 1fr); }
+  .gallery.cols-4 { grid-template-columns: repeat(4, 1fr); }
+  .gallery.cols-1 { grid-template-columns: 1fr; max-width: 480px; }
+
+  .gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+    border: 1px solid #d1dae6;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid #e8eef6;
+    margin: 32px 0;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+  }
+  .tag {
+    font-size: 12px;
+    padding: 4px 12px;
+    border: 1px solid #bfcfe0;
+    border-radius: 100px;
+    color: #6b7280;
+    background: #f0f4fa;
+  }
+
+  ol.flow {
+    padding-left: 20px;
+    color: #6b7280;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .adv-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .adv-list li {
+    font-size: 14px;
+    color: #6b7280;
+    padding-left: 16px;
+    position: relative;
+  }
+  .adv-list li::before {
+    content: '-';
+    position: absolute;
+    left: 0;
+    color: #9ca3af;
+  }
+
+  footer {
+    padding: 32px 40px;
+    text-align: center;
+    font-size: 12px;
+    color: #9ca3af;
+    border-top: 1px solid #d1dae6;
+  }
+
+  @media (max-width: 900px) {
+    .wrap, header, section { padding-left: 24px; padding-right: 24px; }
+    footer { padding-left: 24px; padding-right: 24px; }
+    .gallery.cols-4 { grid-template-columns: repeat(2, 1fr); }
+    .card-body { padding: 24px; }
+    .card-header { padding: 20px 24px; }
+  }
+
+  @media (max-width: 560px) {
+    header h1 { font-size: 26px; }
+    .gallery.cols-2 { grid-template-columns: 1fr; }
+    .gallery.cols-4 { grid-template-columns: repeat(2, 1fr); }
+    .gallery.cols-1 { max-width: 100%; }
+  }
 </style>
 </head>
 <body>
-<div class="page">
 
-<div class="hero">
-  <div class="hero-label">// developer profile</div>
-  <div class="hero-name">Iwan Nursanto Ramadhan</div>
-  <div class="hero-role">Mahasiswa Rekayasa Perangkat Lunak - Mobile &amp; Web Developer<br>Universitas Binasarana Informatika &middot; Bekasi, Indonesia</div>
-  <div class="contact-pills">
-    <a class="cpill" href="mailto:Nursantor16@gmail.com">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
-      <span class="__cf_email__" data-cfemail="52333a3f33367c2133222726203312373f333b3e7c313d3f">Nursantor16@gmail.com</span>
-    </a>
-    <a class="cpill" href="https://github.com/nur-santo" target="_blank">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-      github.com/nur-santo
-    </a>
-    <a class="cpill" href="tel:+6281234567890">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 11a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 7.91a16 16 0 0 0 5.61 5.61l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 14.92z"/></svg>
-      +62 888-9737-843
-    </a>
-  </div>
-</div>
+<header>
+  <h1>Portfolio Project</h1>
+  <p>Dua aplikasi terintegrasi untuk manajemen kehadiran karyawan berbasis web dan mobile.</p>
+</header>
 
-<div class="panel-full">
-  <div class="panel-label">about</div>
-  <p class="about-text">Mahasiswa Rekayasa Perangkat Lunak dengan passion dalam pengembangan aplikasi mobile dan web. Telah mengembangkan beberapa proyek pribadi menggunakan Flutter dan Laravel, termasuk sistem absensi terintegrasi dengan face recognition. Memiliki kemampuan problem-solving yang baik, cepat belajar, dan senang bekerja dalam tim. Aktif mempelajari teknologi terkini dan best practices dalam software development.</p>
-</div>
+<section>
+  <p class="section-label">01 / Web Admin</p>
 
-<div class="grid2">
-  <div class="panel">
-    <div class="panel-label">mobile stack</div>
-    <div class="tag-wrap" style="margin-top:0">
-      <span class="tag">Flutter & Dart</span>
-      <span class="tag">Firebase</span>
-      <span class="tag">REST API</span>
-      <span class="tag">SQLite</span>
-    </div>
-  </div>
-  <div class="panel">
-    <div class="panel-label">backend & web stack</div>
-    <div class="tag-wrap" style="margin-top:0">
-      <span class="tag">Laravel</span>
-      <span class="tag">PHP</span>
-      <span class="tag">MySQL</span>
-      <span class="tag">PostgreSQL</span>
-      <span class="tag">HTML / CSS</span>
-      <span class="tag">JavaScript</span>
-      <span class="tag">Tailwind</span>
-      <span class="tag">Bootstrap</span>
-    </div>
-  </div>
-</div>
-
-<div class="panel-full">
-  <div class="panel-label">tooling</div>
-  <div class="tag-wrap">
-    <span class="tag">Git</span>
-    <span class="tag">Postman</span>
-    <span class="tag">Figma</span>
-    <span class="tag">JWT</span>
-    <span class="tag">MVC</span>
-    <span class="tag">Clean Architecture</span>
-    <span class="tag">SQLite</span>
-    <span class="tag">Chart.js</span>
-  </div>
-</div>
-
-<div class="panel-full">
-  <div class="panel-label">projects</div>
-
-  <div class="entry">
-    <div class="entry-header">
+  <div class="card">
+    <div class="card-header">
       <div>
-        <div class="entry-title">Aplikasi Absensi Karyawan</div>
-        <div class="entry-sub">Flutter &middot; Laravel &middot; MySQL</div>
+        <h2>Sistem Manajemen Absensi</h2>
+        <div class="subtitle">Panel Admin berbasis Web menggunakan Laravel</div>
       </div>
-      <span class="entry-date">2025</span>
+      <a href="https://github.com/nur-santo/absensi-admin" target="_blank" class="btn">GitHub</a>
     </div>
-    <p class="entry-body">Sistem absensi terintegrasi terdiri dari aplikasi mobile untuk karyawan dan admin panel web untuk manajemen. Mendukung pencatatan kehadiran berbasis face recognition.</p>
-    <div class="feat-grid">
-      <div class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Face recognition</span></div>
-      <div class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Real-time notification</span></div>
-      <div class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Dashboard analytics</span></div>
-      <div class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Export laporan PDF/Excel</span></div>
-      <div class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Manajemen shift &amp; jadwal</span></div>
-      <div class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Sistem izin &amp; cuti</span></div>
-      <div class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Role-based access control</span></div>
-      <div class="feat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Riwayat absensi lengkap</span></div>
-    </div>
-    <div class="tech-note"><b>Backend:</b> RESTful API + JWT auth via Laravel &nbsp;|&nbsp; <b>Mobile:</b> Clean architecture + Provider state management &nbsp;|&nbsp; <b>DB:</b> MySQL dengan indexing optimal</div>
-    <div class="tag-wrap">
-      <span class="tag">Flutter</span>
-      <span class="tag">Laravel</span>
-      <span class="tag">MySQL</span>
-      <span class="tag">REST API</span>
-      <span class="tag">JWT Auth</span>
-      <span class="tag">Face Recognition</span>
-    </div>
-    <div class="repo-btns">
-      <a class="cpill" href="https://github.com/nur-santo/absensi-admin" target="_blank">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-      repo - backend
-      </a>
-     <a class="cpill" href="https://github.com/nur-santo/absensi-user" target="_blank">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-      repo - mobile (Flutter)
-      </a>
+
+    <div class="card-body">
+
+      <div class="feature">
+        <h3>Dashboard Absensi</h3>
+        <p>Menampilkan ringkasan data kehadiran, statistik, serta grafik tren harian dan distribusi status.</p>
+        <div class="gallery cols-2">
+          <img src="https://github.com/nur-santo/absensi-admin/raw/master/img/dashboard.png" alt="Dashboard" loading="lazy">
+          <img src="https://github.com/nur-santo/absensi-admin/raw/master/img/dashboard_2.png" alt="Dashboard 2" loading="lazy">
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="feature">
+        <h3>Halaman Karyawan</h3>
+        <p>Menampilkan semua karyawan yang terdaftar beserta form tambah pengguna.</p>
+        <div class="gallery cols-2">
+          <img src="https://github.com/nur-santo/absensi-admin/raw/master/img/karyawan.png" alt="Karyawan" loading="lazy">
+          <img src="https://github.com/nur-santo/absensi-admin/raw/master/img/tambah_user.png" alt="Tambah User" loading="lazy">
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="feature">
+        <h3>Laporan Karyawan</h3>
+        <p>Data seluruh karyawan lengkap dengan rekap kehadiran, keterlambatan, dan persentase kehadiran.</p>
+        <div class="gallery cols-4">
+          <img src="https://github.com/nur-santo/absensi-admin/raw/master/img/laporan.png" alt="Laporan" loading="lazy">
+          <img src="https://github.com/nur-santo/absensi-admin/raw/master/img/laporan_2.png" alt="Laporan 2" loading="lazy">
+          <img src="https://github.com/nur-santo/absensi-admin/raw/master/img/laporan_3.png" alt="Laporan 3" loading="lazy">
+          <img src="https://github.com/nur-santo/absensi-admin/raw/master/img/laporan_4.png" alt="Laporan 4" loading="lazy">
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="feature">
+        <h3>Pengaturan Shift</h3>
+        <p>Fitur untuk mengubah jam shift kerja karyawan.</p>
+        <div class="gallery cols-1">
+          <img src="https://github.com/nur-santo/absensi-admin/raw/master/img/ubah_jam_shift.png" alt="Ubah Jam Shift" loading="lazy">
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="feature">
+        <h3>Teknologi</h3>
+        <div class="tags">
+          <span class="tag">Laravel</span>
+          <span class="tag">Blade</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Chart.js</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">Laragon</span>
+        </div>
+      </div>
+
     </div>
   </div>
+</section>
 
-  <div class="entry">
-    <div class="entry-header">
+<section>
+  <p class="section-label">02 / Mobile App</p>
+
+  <div class="card">
+    <div class="card-header">
       <div>
-        <div class="entry-title">Website Portfolio Pribadi</div>
-        <div class="entry-sub">HTML &middot; CSS &middot; JavaScript</div>
+        <h2>Aplikasi Absensi Karyawan</h2>
+        <div class="subtitle">Aplikasi mobile Flutter dengan Face Recognition dan REST API</div>
       </div>
-      <span class="entry-date">2023</span>
+      <a href="https://github.com/nur-santo/absensi-user" target="_blank" class="btn">GitHub</a>
     </div>
-    <p class="entry-body">Website portfolio responsif dengan animasi interaktif dan contact form. Mendukung semua ukuran layar, smooth scrolling, dan notifikasi email otomatis.</p>
-    <div class="tag-wrap">
-      <span class="tag">HTML/CSS</span>
-      <span class="tag">JavaScript</span>
-      <span class="tag">Bootstrap</span>
-    </div>
-    <div class="repo-btns">
-      <a class="cpill" href="https://github.com/nur-santo/nur-santo.github.io" target="_blank">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-      repo - source code
-      </a>
+
+    <div class="card-body">
+
+      <div class="feature">
+        <h3>Tampilan Utama</h3>
+        <p>Antarmuka utama aplikasi untuk karyawan melakukan absensi dan melihat riwayat.</p>
+        <div class="gallery cols-1">
+          <img src="https://github.com/nur-santo/absensi-user/raw/master/img/home.jpg" alt="Home" loading="lazy">
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="feature">
+        <h3>Perizinan</h3>
+        <p>Pengajuan izin, sakit, atau cuti dengan input tanggal, keterangan, dan upload bukti opsional.</p>
+        <div class="gallery cols-1">
+          <img src="https://github.com/nur-santo/absensi-user/raw/master/img/buat_perizinan.jpg" alt="Perizinan" loading="lazy">
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="feature">
+        <h3>Riwayat Kehadiran dan Perizinan</h3>
+        <p>List riwayat absensi harian beserta status pengajuan izin.</p>
+        <div class="gallery cols-2">
+          <img src="https://github.com/nur-santo/absensi-user/raw/master/img/kehadiran.jpg" alt="History Kehadiran" loading="lazy">
+          <img src="https://github.com/nur-santo/absensi-user/raw/master/img/perizinan.jpg" alt="History Perizinan" loading="lazy">
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="feature">
+        <h3>Alur Sistem</h3>
+        <ol class="flow">
+          <li>User login dengan akun terdaftar</li>
+          <li>User melakukan absensi via face capture atau foto</li>
+          <li>Data dikirim ke backend API</li>
+          <li>Backend validasi wajah via Face Recognition API</li>
+          <li>Data absensi disimpan ke database</li>
+          <li>User dapat melihat riwayat kehadiran</li>
+        </ol>
+      </div>
+
+      <hr>
+
+      <div class="feature">
+        <h3>Keunggulan Sistem</h3>
+        <ul class="adv-list">
+          <li>Absensi lebih akurat dengan face recognition</li>
+          <li>Mendukung mode WFO dan WFH</li>
+          <li>Monitoring real-time oleh admin</li>
+          <li>Terintegrasi sepenuhnya dengan REST API</li>
+        </ul>
+      </div>
+
+      <hr>
+
+      <div class="feature">
+        <h3>Teknologi</h3>
+        <div class="tags">
+          <span class="tag">Flutter</span>
+          <span class="tag">REST API</span>
+          <span class="tag">Camera Integration</span>
+          <span class="tag">Face Recognition API</span>
+        </div>
+      </div>
+
     </div>
   </div>
-</div>
+</section>
 
-<div class="grid2">
-  <div class="panel">
-    <div class="panel-label">pendidikan</div>
-    <div class="entry-title">S1 Rekayasa Perangkat Lunak</div>
-    <div class="entry-sub" style="margin:.3rem 0">Universitas Binasarana Informatika</div>
-    <div class="entry-body">2022 - Sekarang</div>
-    <div class="edu-gpa">IPK 3.45 / 4.00</div>
-    <p class="entry-body" style="margin-top:.75rem;font-size:.8rem">Pemrograman Mobile, Basis Data, Pemrograman Web, Rekayasa Perangkat Lunak, Algoritma &amp; Struktur Data</p>
-  </div>
-  <div class="panel">
-    <div class="panel-label">soft skills</div>
-    <div class="soft-grid">
-      <div class="soft-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Problem Solving</div>
-      <div class="soft-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Teamwork</div>
-      <div class="soft-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Time Management</div>
-      <div class="soft-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Quick Learner</div>
-      <div class="soft-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Attention to Detail</div>
-      <div class="soft-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Communication</div>
-    </div>
-    <div style="margin-top:1.25rem">
-  <div class="panel-label">bahasa</div>
+<footer>nur-santo / 2025</footer>
 
-  <div class="skill-row">
-    <div class="skill-top">
-      <span class="skill-name">Bahasa Indonesia</span>
-      <span class="skill-pct">Native</span>
-    </div>
-  </div>
-
-  <div class="skill-row">
-    <div class="skill-top">
-      <span class="skill-name">English</span>
-      <span class="skill-pct">Intermediate</span>
-    </div>
-  </div>
-
-</div>
+</body>
+</html>
