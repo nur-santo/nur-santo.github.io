@@ -398,7 +398,165 @@
   <p>Dua aplikasi terintegrasi untuk manajemen kehadiran karyawan berbasis web dan mobile.</p>
 </header>
 
-<!-- isi portfolio kamu tetap -->
+<section>
+  <p class="section-label">01 / Web Admin</p>
+
+  <div class="card">
+    <div class="card-header">
+      <div>
+        <h2>Sistem Manajemen Absensi</h2>
+        <div class="subtitle">Panel Admin berbasis Web menggunakan Laravel</div>
+      </div>
+      <a href="https://github.com/nur-santo/absensi-admin" target="_blank" class="btn">GitHub</a>
+    </div>
+
+    <div class="card-body">
+
+      <div class="feature">
+        <h3>Dashboard Absensi</h3>
+        <p>Menampilkan ringkasan data kehadiran, statistik, serta grafik tren harian dan distribusi status.</p>
+        <div class="gallery cols-2">
+          <img src="https://github.com/nur-santo/absensi-admin/raw/master/img/dashboard.png" alt="Dashboard" loading="lazy">
+          <img src="https://github.com/nur-santo/absensi-admin/raw/master/img/dashboard_2.png" alt="Dashboard 2" loading="lazy">
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="feature">
+        <h3>Halaman Karyawan</h3>
+        <p>Menampilkan semua karyawan yang terdaftar beserta form tambah pengguna.</p>
+        <div class="gallery cols-2">
+          <img src="https://github.com/nur-santo/absensi-admin/raw/master/img/karyawan.png" alt="Karyawan" loading="lazy">
+          <img src="https://github.com/nur-santo/absensi-admin/raw/master/img/tambah_user.png" alt="Tambah User" loading="lazy">
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="feature">
+        <h3>Laporan Karyawan</h3>
+        <p>Data seluruh karyawan lengkap dengan rekap kehadiran, keterlambatan, dan persentase kehadiran.</p>
+        <div class="gallery cols-4">
+          <img src="https://github.com/nur-santo/absensi-admin/raw/master/img/laporan.png" alt="Laporan" loading="lazy">
+          <img src="https://github.com/nur-santo/absensi-admin/raw/master/img/laporan_2.png" alt="Laporan 2" loading="lazy">
+          <img src="https://github.com/nur-santo/absensi-admin/raw/master/img/laporan_3.png" alt="Laporan 3" loading="lazy">
+          <img src="https://github.com/nur-santo/absensi-admin/raw/master/img/laporan_4.png" alt="Laporan 4" loading="lazy">
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="feature">
+        <h3>Pengaturan Shift</h3>
+        <p>Fitur untuk mengubah jam shift kerja karyawan.</p>
+        <div class="gallery cols-1">
+          <img src="https://github.com/nur-santo/absensi-admin/raw/master/img/ubah_jam_shift.png" alt="Ubah Jam Shift" loading="lazy">
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="feature">
+        <h3>Teknologi</h3>
+        <div class="tags">
+          <span class="tag">Laravel</span>
+          <span class="tag">Blade</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Chart.js</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">Laragon</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <p class="section-label">02 / Mobile App</p>
+
+  <div class="card">
+    <div class="card-header">
+      <div>
+        <h2>Aplikasi Absensi Karyawan</h2>
+        <div class="subtitle">Aplikasi mobile Flutter dengan Face Recognition dan REST API</div>
+      </div>
+      <a href="https://github.com/nur-santo/absensi-user" target="_blank" class="btn">GitHub</a>
+    </div>
+
+    <div class="card-body">
+
+      <div class="feature">
+        <h3>Tampilan Utama</h3>
+        <p>Antarmuka utama aplikasi untuk karyawan melakukan absensi dan melihat riwayat.</p>
+        <div class="gallery cols-1">
+          <img src="https://github.com/nur-santo/absensi-user/raw/master/img/home.jpg" alt="Home" loading="lazy">
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="feature">
+        <h3>Perizinan</h3>
+        <p>Pengajuan izin, sakit, atau cuti dengan input tanggal, keterangan, dan upload bukti opsional.</p>
+        <div class="gallery cols-1">
+          <img src="https://github.com/nur-santo/absensi-user/raw/master/img/buat_perizinan.jpg" alt="Perizinan" loading="lazy">
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="feature">
+        <h3>Riwayat Kehadiran dan Perizinan</h3>
+        <p>List riwayat absensi harian beserta status pengajuan izin.</p>
+        <div class="gallery cols-2">
+          <img src="https://github.com/nur-santo/absensi-user/raw/master/img/kehadiran.jpg" alt="History Kehadiran" loading="lazy">
+          <img src="https://github.com/nur-santo/absensi-user/raw/master/img/perizinan.jpg" alt="History Perizinan" loading="lazy">
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="feature">
+        <h3>Alur Sistem</h3>
+        <ol class="flow">
+          <li>User login dengan akun terdaftar</li>
+          <li>User melakukan absensi via face capture atau foto</li>
+          <li>Data dikirim ke backend API</li>
+          <li>Backend validasi wajah via Face Recognition API</li>
+          <li>Data absensi disimpan ke database</li>
+          <li>User dapat melihat riwayat kehadiran</li>
+        </ol>
+      </div>
+
+      <hr>
+
+      <div class="feature">
+        <h3>Keunggulan Sistem</h3>
+        <ul class="adv-list">
+          <li>Absensi lebih akurat dengan face recognition</li>
+          <li>Mendukung mode WFO dan WFH</li>
+          <li>Monitoring real-time oleh admin</li>
+          <li>Terintegrasi sepenuhnya dengan REST API</li>
+        </ul>
+      </div>
+
+      <hr>
+
+      <div class="feature">
+        <h3>Teknologi</h3>
+        <div class="tags">
+          <span class="tag">Flutter</span>
+          <span class="tag">REST API</span>
+          <span class="tag">Camera Integration</span>
+          <span class="tag">Face Recognition API</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 <footer>nur-santo / 2025</footer>
 
