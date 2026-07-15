@@ -284,9 +284,7 @@
     border-top: 1px solid #d1dae6;
   }
 
-  /* =========================
-     LIGHTBOX
-  ========================= */
+
 
   .lightbox {
     position: fixed;
@@ -325,9 +323,6 @@
     line-height: 1;
   }
 
-  /* =========================
-     RESPONSIVE
-  ========================= */
 
   @media (max-width: 900px) {
     .wrap,
@@ -371,13 +366,39 @@
     .gallery.cols-1 {
       max-width: 100%;
     }
+
+   @media print {
+  body {
+    background: #fff !important;
+    color: #000;
+  }
+
+  .card,
+  .tag,
+  header,
+  section,
+  footer {
+    background: #fff !important;
+    box-shadow: none !important;
+  }
+
+  .btn {
+    background: #fff !important;
+    color: #000 !important;
+    border: 1px solid #000;
+  }
+
+  * {
+    -webkit-print-color-adjust: economy;
+    print-color-adjust: economy;
+  }
+}
   }
 </style>
 </head>
 
 <body>
 
-<!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox">
   <span class="lightbox-close" id="closeLightbox">&times;</span>
   <img id="lightboxImg" src="" alt="">
@@ -573,7 +594,6 @@
     }
   });
 
-  // ESC CLOSE
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       lightbox.classList.remove('show');
